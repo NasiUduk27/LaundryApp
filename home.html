@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <header>
+    <img src="asset/logo.png">
+   </header>
+    <nav class = "navCard">
+       <ul>
+        <li><a href="#Home">Home</a></li>
+        <li><a href="price.html">Price Check</a></li>
+        <li><a href="login.html">Logout</a></li>
+       </ul> 
+    </nav><br>
+    <div id="slider">
+        <img src="asset/slider1.jpg" id="sliderImage1">
+        <img src="asset/slider2.jpg" id="sliderImage2">
+      </div>
+    <div style="display: flex;">
+        
+        <main>
+            <article class = "card">
+                <h2>Home</h2>
+                <p class = "coba">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet nisi, quas ut quo qui iure, nihil impedit nostrum, porro aperiam eius! Distinctio sunt, facere atque neque odio aliquam nam id!
+                    Illum tenetur optio soluta velit modi alias asperiores, fugiat esse sapiente quisquam ab eius, temporibus deleniti vitae iure maiores iste enim, maxime officiis repudiandae sequi excepturi cupiditate pariatur beatae. At?
+                    Voluptatem vitae illo quis debitis doloremque eos molestiae, repellat nesciunt adipisci aperiam qui magnam nostrum impedit deserunt laboriosam sunt labore itaque, distinctio cumque reiciendis nisi enim vel! Labore, exercitationem aliquam.
+                </p> 
+            </article>
+
+            <article class = "card">
+                <h2>Image</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet nisi, quas ut quo qui iure, nihil impedit nostrum, porro aperiam eius! Distinctio sunt, facere atque neque odio aliquam nam id!
+                    Illum tenetur optio soluta velit modi alias asperiores, fugiat esse sapiente quisquam ab eius, temporibus deleniti vitae iure maiores iste enim, maxime officiis repudiandae sequi excepturi cupiditate pariatur beatae. At?
+                    Voluptatem vitae illo quis debitis doloremque eos molestiae, repellat nesciunt adipisci aperiam qui magnam nostrum impedit deserunt laboriosam sunt labore itaque, distinctio cumque reiciendis nisi enim vel! Labore, exercitationem aliquam.
+                </p> 
+            </article>
+        </main>
+        <aside>
+            <article class = "card">
+                <h4>Ikuti Kami di</h4>
+                <div class="follow">
+                      <a href="https://www.facebook.com/" target="_blank">
+                        <img src="asset/facebooklogo.png" alt="facebook">
+                      </a>
+                      <a href="https://www.instagram.com/" target="_blank">
+                        <img src="asset/instagramlogo.png" alt="instagram">
+                      </a>
+                    </div>
+            </article>
+        </aside>
+    </div>
+
+    <script src="jquery-3.6.1.js"></script>
+    <script>
+        var timeoutDuration = 5000;
+        var i = 0;
+
+        $(document).ready(function() {
+        $('.slidertitle, #slider img').hide();
+        showNextImage();
+        setInterval(showNextImage, timeoutDuration);
+      })
+
+      function showNextImage() {
+        i++;
+        $('#sliderImage' + i).appendTo('#slider').fadeIn(1500).delay(2300).fadeOut(2000);
+        $('#title' + i).appendTo('#slider').fadeIn(1500).delay(2300).fadeOut(2000);
+        if (i == 2) {
+          i = 0;
+        }
+      }
+    </script>
+
+    <footer class = "card">
+        <h2>OTIF Laundry</h2>
+        <p>Jl. Letjen Sutoyo no 27</p>
+        <p><a href="tel:+03313333333">+0331-333-333</a></p>
+        &copy; 2022, Otif Laundry
+    </footer>
+</body>
+</html>

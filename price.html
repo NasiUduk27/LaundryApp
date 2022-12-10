@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Check</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navCard">
+        <img src="asset/logo.png">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="price.html">Price Check</a></li>
+            <li><a href="login.html">Logout</a></li>
+        </ul>
+    </nav>
+
+    <h3>Biaya Laundry Anda</h3>
+
+    <div id="price-check">
+        <label for="weight">Weight (dalam kg)</label><br>
+        <input type="number" id="weight" name="weight" min="1" required><br><br>
+
+        <label for="service">Service</label><br>
+        <select name="weight" id="service" required>
+            <option value="Wash dry">Wash dry</option>
+            <option value="Wash and Ironing">Wash and Ironing</option>
+            <option value="Ironing only">Ironing only</option>
+        </select><br><br>
+
+        <label for="type">Type</label><br>
+        <select name="Type" id="type">
+            <option value="Reguler">Reguler</option>
+            <option value="Express">Express</option>
+        </select><br><br>
+
+        <label for="membership">Membership</label><br>
+        <select name="Membership" id="membership">
+            <option value="Non-Member" required>Non-Member</option>
+            <option value="Member">Member</option>
+        </select><br><br>
+
+        <div class="button-container">
+            <input type="submit" id="submit" value="Check">
+        </div>
+    </div>
+
+    <div class="price-result">
+
+        <p>Harga&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Rp <span id="harga">0</span></p>
+        <p>Diskon&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Rp <span id="diskon">0</span></p>
+        <p>Harga Total : Rp <span id="total">0</span></p>
+    </div>
+
+
+    <script src="jquery-3.6.1.js"></script>
+    <script src="jquery.validate.js"></script>
+
+    <script>
+        $("#submit").click(function () {
+            var weight = $('#weight').val();
+            var service = $('#service').val();
+            var type = $('#type').val();
+            var membership = $('#membership').val();
+
+            var harga = 0;
+
+            if (service == 'Wash dry') {
+                harga = 1000;
+            } else if (service == 'Wash and Ironing') {
+                harga = 1200;
+            } else {
+                harga = 900;
+            }
+
+            var totalHarga = weight * harga;
+
+            if (type == 'Express') {
+                totalHarga += weight * 200;
+            }
+
+
+            $('#harga').text(totalHarga);
+
+            var diskon = 0;
+
+            if (membership == 'Member') {
+                diskon = totalHarga * 0.1;
+            }
+
+            $('#diskon').text(diskon);
+
+            totalHarga -= diskon;
+
+            $('#total').text(totalHarga);
+
+        })
+    </script>
+
+    <footer class="card">
+        <h2>OTIF Laundry</h2>
+        <p>Jl. Letjen Sutoyo no 27</p>
+        <p><a href="tel:+03313333333">+0331-333-333</a></p>
+        &copy; 2022, Otif Laundry
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class = "form">
+        <form id="loginForm">
+            <img class="img-responsive" src="asset/logo.png" alt="logo">
+
+            <label>Username</label><br><br>
+            <input name="username" type="text"><br>
+            <label>Password</label><br><br>
+            <input name="password" type="password"><br>
+
+
+            <button>LOGIN</button>
+        </form>
+    </div>
+
+    <script src="jquery-3.6.1.js"></script>
+    <script src="jquery.validate.js"></script>
+
+    <script>
+         $(document).ready(function() {
+      $("#loginForm").validate({
+        rules: {
+          username: "required",
+          password: {
+            required: true,
+            minlength: 8
+          }
+        },
+        messages: {
+          username: "Username harus diisi",
+          password: {
+            required: "Password harus diisi",
+            minlength: "Password minimal terdiri dari 8 karakter<br>"
+          }
+        },
+        submitHandler: function(form) {
+          window.location.href = "home.html";
+        }
+      });
+    });
+    </script>
+    
+</body>
+</html>

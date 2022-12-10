@@ -1,0 +1,266 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+header {
+    padding: 50px;
+    width: 100%;
+}
+
+header img {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main {
+    width: 80%;
+    background-color: white;
+    text-align: justify;
+    padding: 15px;
+    padding-top: 25px;
+}
+
+h2 {
+    text-align: start;
+}
+
+h3 {
+    text-align: center;
+    font-size: 30px;
+}
+
+.card {
+    box-shadow: 2px 4px 8px 0 rgba(0.2, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+aside {
+    width: 20%;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 15px;
+}
+
+.follow {
+    width: 100%;
+    display: inline-block;
+}
+
+.img-responsive {
+    width: 300px;
+    margin-bottom: 20px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+
+}
+
+img {
+    width: 40px;
+    float: center;
+}
+
+#slider {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#slider img {
+    width: 100%;
+    position: absolute;
+    vertical-align: middle;
+    left: 0;
+    z-index: 1;
+}
+
+nav {
+    width: 100%;
+    background-color: white;
+    padding: 1px;
+}
+
+nav li {
+    display: inline;
+    list-style-type: none;
+    margin-right: 15px;
+}
+
+nav a {
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #364f6b;
+}
+
+.navCard {
+    box-shadow: 4px 4px 8px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+}
+
+.navCard img {
+    width: 10%;
+}
+
+a:hover {
+    color: #202f41;
+    font-weight: bold;
+}
+
+*.coba::first-letter {
+    font-size: 3em;
+    font-weight: bold;
+    color: #202f41;
+}
+
+header {
+    display: flex;
+}
+
+
+footer {
+    border-radius: 10px;
+    padding: 5px 0;
+    margin: 25px;
+    color: #202f41;
+    background-color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+footer p {
+    text-align: left;
+    font-weight: 400;
+}
+
+footer h2 {
+    text-align: left;
+}
+
+.form {
+    background-position: center;
+    border-style: solid;
+    border-color: #364f6b;
+    border-radius: 15px;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px 25px;
+    width: 300px;
+}
+
+.form h1 {
+    text-align: center;
+    color: #364f6b;
+    margin-bottom: 30px;
+
+}
+
+.form label {
+    text-align: left;
+    color: #364f6b;
+}
+
+.form form input {
+    width: calc(100% - 20px);
+    border-radius: 10px;
+    padding: 8px 10px;
+    margin-bottom: 15px;
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid #364f6b;
+    color: #364f6b;
+    font-size: 20px;
+}
+
+.form form button {
+    width: 30%;
+    float: right;
+    padding: 5px 0;
+    border-radius: 10px;
+    background-color: white;
+    font-size: 18px;
+    font-weight: bold;
+    color: #364f6b;
+}
+
+#price-check {
+    background-position: center;
+    border-style: solid;
+    border-color: #364f6b;
+    border-radius: 15px;
+    background-repeat: no-repeat;
+    padding: 20px 25px;
+    width: 300px;
+    margin: 2rem auto;
+}
+
+#price-check label {
+    width: 30%;
+    padding: 5px 0;
+    border-radius: 10px;
+    background-color: white;
+    font-size: 18px;
+    font-weight: bold;
+    color: #364f6b;
+
+}
+
+.button-container {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+#price-check #submit {
+    width: 30%;
+    padding: 5px 0;
+    border-radius: 10px;
+    background-color: white;
+    font-size: 18px;
+    font-weight: bold;
+    color: #364f6b;
+}
+
+#price-check select {
+    border: 1px solid #ccc;
+    padding: 0 10px;
+    height: 40px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+#price-check input {
+    border: 1px solid #ccc;
+    padding: 0 10px;
+    height: 40px;
+    width: 93%;
+    border-radius: 10px;
+}
+
+.price-result {
+    background-position: center;
+    border-style: solid;
+    border-color: #364f6b;
+    border-radius: 15px;
+    background-repeat: no-repeat;
+    padding: 20px 25px;
+    width: 300px;
+    margin: 2rem auto;
+}
